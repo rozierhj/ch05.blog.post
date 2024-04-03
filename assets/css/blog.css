@@ -13,10 +13,47 @@ html, body{
     border: 7px solid red;
 }
 header{
+    display: flex;
+    position: relative;
     background-color: green;
     height: 12%;
     border-bottom: 7px solid black;
+    justify-content: left;
+    align-items:start;
 }
 #divider{
     height: 0.6%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 10px solid blue;
+}
+#back-button{
+    position:absolute;
+    right:60px;
+    top: 20px;
+    border: none;
+    background-color:#007bff;
+    color: white;
+    border-bottom: 4px solid #0056b3;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+}
+#back-button:hover, #back-button:active{
+    cursor: pointer;
+}
+#light-bulb{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    right:20px;
+    top: 20px;
+    font-size: 35px;
+}
+#light-bulb:hover, #light-bulb:active{
+    cursor: pointer;
 }
