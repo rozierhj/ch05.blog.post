@@ -13,15 +13,15 @@ submitButton.addEventListener('click',function(event){
     let suffix = localStorage.length;
     let storageId = 'post'+suffix;
     localStorage.setItem(String(storageId), JSON.stringify(post));
+
     if(localStorage.getItem('light') === undefined || localStorage.getItem('light') === null){
-        localStorage.setItem('light', true);
-        let lightBulb = document.getElementById('light-bulb');
-        lightBulb.style.color = '#ccc';
+        localStorage.setItem('light', true);;
     }
     window.location.href='blog.html';
-});
-const clearButton = document.getElementById('clear-button');
 
+});
+
+const clearButton = document.getElementById('clear-button');
 clearButton.addEventListener('click', function(){
     localStorage.clear();
     console.log('Cleared Local Storage');

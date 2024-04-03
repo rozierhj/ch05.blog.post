@@ -3,53 +3,64 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 32px;
+}
+:root{
+    --dark-1: white ;
+    --dark-2: rgba(154, 205, 237, 1);
+    --dark-3: rgba(60, 169, 237, 1); 
+    --dark-4: rgba(0, 85, 154, 1);
+    --dark-5: rgba(0, 5, 54, 1);
 }
 html, body{
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%;
-    border: 7px solid red;
+    font-size: 32px;
 }
 header{
-    background-color: green;
-    height: 12%;
+    background-color: var(--dark-2);
+    height: 150px;
     border-bottom: 7px solid black;
 }
 #divider{
-    height: 0.6%;
+    height: 10px;
 }
 main{
     display: flex;
-    background-color: lightpink;
-    height: 87.5%;
+    background-color: var(--dark-1);
     border-top: 7px solid black;
     width: 100%;
+    height: 100%;
 }
 .side{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: lightblue;
+    background-color: var(--dark-1);
     width: 50%;
     padding: 10px;
-  
 }
 form{
+    display: flex;
+    flex-direction: column;
     padding: 100px;
-}
-form input{
-    /* display: inline-block; */
     width: 100%;
+}
+input:hover, input:active {
+
+    background-color: var(--dark-2);
+}
+input {
+
     height: 100px;
-    font-size: 32px;
-    /* padding-left: 20px; */
-    background-color: lightcoral;
+    padding-left: 20px;
+    background-color: var(--dark-2);
 }
 form label{
-    font-size: 32px;
-    color: red;
+    color: var(--dark-5);
 }
 #menu{
     display:flex;
@@ -59,24 +70,32 @@ form label{
 }
 #menu h1{
     font-size: 50px;
+    color:var(--dark-5);
 }
 #center{
-    background-color: yellow;
+    background-color:var(--dark-1);
     width: 20px;
     border-left: 5px solid black;
     border-right: 5px solid black;
 }
 #submit-button{
+    background-color:rgba(60, 169, 237, 1);
     margin-top: 30px;
+    border-bottom: 10px solid var(--dark-4);
+}
+#submit-button:hover, #submit-button:active{
+    cursor: pointer;
 }
 #circle{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 900px;
-    width: 900px;
-    background-color: red;
+    height: 800px;
+    width: 800px;
+    margin: 50px;
+    background-color: blue;
     border-radius: 50%;
+    border: 1px solid var(--dark-1);
     background-image: linear-gradient(180deg, 
     rgba(250,250,250,1) 5%,
     rgba(249, 242, 237, 1) 10%,
@@ -130,13 +149,18 @@ form label{
 }
 footer{
     display: flex;
-    background-color: blueviolet;
-    height: 200px;
+    background-color: var(--dark-2);
     width: 100%;
     align-items: center;
     justify-content: center;
+    height: 150px;
 }
 #clear-button{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 50px;
     width: 200px;
+    font-size: 16px;
 }
