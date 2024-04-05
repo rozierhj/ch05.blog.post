@@ -21,6 +21,7 @@ html, body{
     font-size: 32px;
 }
 header{
+    padding: 0;
     background-color: var(--dark-2);
     height: 150px;
     border-bottom: 7px solid black;
@@ -49,15 +50,27 @@ form{
     padding: 100px;
     width: 100%;
 }
+input,
 input:hover, 
-input:active, 
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active {
+input:active{
 
     font-size: 32px;
     background-color: var(--dark-2);
+}
+#light-bulb{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    right:20px;
+    top: 20px;
+    font-size: 35px;
+    color: #ccc;
+
+}
+#light-bulb:hover, #light-bulb:active{
+    cursor: pointer;
+    color: green;
 }
 input {
 
