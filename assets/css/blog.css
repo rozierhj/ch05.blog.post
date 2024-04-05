@@ -3,35 +3,45 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 32px;
+}
+:root{
+    --dark-1: white ;
+    --dark-2: rgba(154, 205, 237, 1);
+    --dark-3: rgba(60, 169, 237, 1); 
+    --dark-4: rgba(0, 85, 154, 1);
+    --dark-5: rgba(0, 5, 54, 1);
 }
 html, body{
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%;
-    border: 7px solid red;
+    font-size: 32px;
 }
 header{
     display: flex;
     position: relative;
-    background-color: green;
-    height: 12%;
-    border-bottom: 7px solid black;
+    background-color: var(--dark-2);
+    height: 150px;
+    border-bottom: 7px solid var(--dark-5);
     justify-content: left;
     align-items:start;
 }
 #divider{
-    height: 0.6%;
+    height: 10px;
 }
 main{
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-top: 10px solid blue;
+    border-top: 7px solid var(--dark-5);
+    background-color: var(--dark-1);
 }
 #back-button{
+    font-size: 16px;
     position:absolute;
     right:60px;
     top: 20px;

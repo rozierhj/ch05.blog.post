@@ -1,9 +1,24 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+}
+:root{
+    --dark-1: white ;
+    --dark-2: rgba(154, 205, 237, 1);
+    --dark-3: rgba(60, 169, 237, 1); 
+    --dark-4: rgba(0, 85, 154, 1);
+    --dark-5: rgba(0, 5, 54, 1);
+}
+
 
 .blog-post{
     position: relative;
     width: 80%;
     height: 300px;
-    background-color: green;
+    background-color: var(--dark-2);
     margin: 20px;
     border: 10px solid black;
 }

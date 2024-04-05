@@ -49,8 +49,14 @@ form{
     padding: 100px;
     width: 100%;
 }
-input:hover, input:active {
+input:hover, 
+input:active, 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
 
+    font-size: 32px;
     background-color: var(--dark-2);
 }
 input {
