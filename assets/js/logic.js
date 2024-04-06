@@ -67,15 +67,15 @@ function lightMode(){
     let lightBulb = document.getElementById('light-bulb');
         lightBulb.style.color = 'yellow';
         headerFooter(dark1,dark3,'green')
-        setClassSide('blue', 'red', 'purple','pink');
+        setClassSide(dark2,dark5,dark1,dark5);
         setForm(dark1,dark5,dark5,dark1,dark2);
 }
 function darkMode(){
     let lightBulb = document.getElementById('light-bulb');
     lightBulb.style.color = '#ccc';
 
-        headerFooter(dark3,dark1,'red')
-        setClassSide('red', 'blue', 'pink','purple');
+        headerFooter(dark2,dark5,dark5);
+        setClassSide(dark2,dark3,dark1,dark5);
         setForm(dark5,dark1,dark1,dark2,dark1);
 }
 function setClassSide(color, text, menuColor, colorBorder){
@@ -127,12 +127,12 @@ function setForm(background, text, submitText, submitColor, submitBorder){
     submit.style.borderBottomColor = submitBorder;
 }
 function headerFooter(colorBackground, colorText, borderColor){
+    
     let header = document.getElementsByTagName('header');
-
-    Object.assign(header[0].style,{
-        backgroundColor: colorBackground,
-        color: colorText,
-        borderBottomColor: borderColor
+        Object.assign(header[0].style,{
+            backgroundColor: colorBackground,
+            color: colorText,
+            borderBottomColor: borderColor
     });
     
     let footer = document.getElementsByTagName('footer');
