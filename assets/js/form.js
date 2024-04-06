@@ -1,13 +1,3 @@
-const dark1 = 'white';
-const dark2 = 'rgba(154, 205, 237, 1)';
-const dark3 = 'rgba(60, 169, 237, 1)'; 
-const dark4 = 'rgba(0, 85, 154, 1)';
-const dark5 = 'rgba(0, 5, 54, 1)';
-
-let statusjs = document.title;
-if(statusjs === 'Homepage')
-    console.log(statusjs);
-
 window.addEventListener('load', function(){
 
     if(localStorage.getItem('light') === undefined || localStorage.getItem('light') === null){
@@ -21,6 +11,18 @@ window.addEventListener('load', function(){
         darkMode();
     }
 });
+
+const dark1 = 'white';
+const dark2 = 'rgba(154, 205, 237, 1)';
+const dark3 = 'rgba(60, 169, 237, 1)'; 
+const dark4 = 'rgba(0, 85, 154, 1)';
+const dark5 = 'rgba(0, 5, 54, 1)';
+
+let statusjs = document.title;
+if(statusjs === 'Homepage')
+    console.log(statusjs);
+
+
 
 const clickLight = document.getElementById('light-bulb');
 clickLight.addEventListener('click',function(){
@@ -54,15 +56,25 @@ function lightMode(){
     let submitButton = dark5;
     let submitText = dark2;
     let submitBorder = dark3;
+    let blogPageText = dark5;
+    let blogPostBackground = dark3;
+    let blogPostText = dark1;
+    let blogPostBorder = dark5;
 
     let lightBulb = document.getElementById('light-bulb');
         lightBulb.style.color = 'yellow';
+    let page = document.getElementsByTagName('body');
+    page[0].style.backgroundColor = dark1;
 
         headerFooter(headerFooterBackground,h1Text,pageBorders);
+        blogPosts(blogPostBackground,blogPostBorder,blogPostText);
 
       if(statusjs === 'Homepage'){
         setClassSide(pageBackground,pageText,formTitle,pageBorders);
         setForm(formBackground,formText,submitText,submitButton,submitBorder);
+      }
+      if(statusjs === 'Blog Posts'){
+        blogBackground(pageBackground,pageBorders,blogPageText);
       }
 
 }
@@ -80,16 +92,24 @@ function darkMode(){
     let submitButton = dark3;
     let submitText = dark5;
     let submitBorder = dark2;
+    let blogPageText = dark2;
+    let blogPostBackground = dark1;
+    let blogPostText = dark5;
+    let blogPostBorder = dark5;
 
     let lightBulb = document.getElementById('light-bulb');
     lightBulb.style.color = '#ccc';
+    let page = document.getElementsByTagName('body');
+    page[0].style.backgroundColor = dark5;
         headerFooter(headerFooterBackground,h1Text,pageBorders);
-      
+        blogPosts(blogPostBackground,blogPostBorder,blogPostText);
         if(statusjs === 'Homepage'){
             setClassSide(pageBackground,pageText,formTitle,pageBorders);
             setForm(formBackground,formText,submitText,submitButton,submitBorder);
         }
-
+        if(statusjs === 'Blog Posts'){
+            blogBackground(pageBackground,pageBorders,blogPageText);
+          }
         
 }
 function setClassSide(background, text, formTitle, borders){
@@ -156,13 +176,41 @@ function headerFooter(background, text, borders){
         });
     
 }
-function blogBackground(background, headerFooterBackground, borders){
-    let header = document.getElementsByTagName('header');
-        Object.assign(header[0],style,{
-            backgroundColor : headerFooterBackground
+function blogBackground(background, borders, text){
+
+    let blogFooter = document.getElementsByTagName('footer');
+    blogFooter[0].style.borderColor = borders;
+    let list = blogFooter[0].getElementsByTagName('li');
+        for(let i = 0; i < list.length; i++){
+            Object.assign(list[i].style,{
+               color:text,
+            });
+        }
+        let bottomMessage = document.getElementById('bottom-message');
+        bottomMessage.style.color = text;
+        let heart = bottomMessage.getElementsByTagName('i');
+        heart[0].style.color = 'red';
+        let mainPage = document.getElementsByTagName('main');
+        console.log(mainPage);
+        mainPage[0].style.backgroundColor =background;
+        mainPage[0].style.borderColor = borders;    
+    let backButton = document.getElementById('back-button');
+        Object.assign(backButton.style,{
+            backgroundColor:background,
+            color:text
         });
-    let footer = document.getElementsByTagName('footer');
-        Object.assign(footer[0],style,{
-            backgroundColor : headerFooterBackground
-        });
+    let backArrow = backButton.getElementsByTagName('i');
+    backArrow[0].style.color = borders;
+}
+function blogPosts(background, borders, text){
+
+    let posts = document.getElementsByClassName('blog-post');
+        for(let i = 0; i < posts.length; i++){
+            Object.assign(posts[i].style,{
+                backgroundColor:background,
+                color:text,
+                borderColor:borders
+            });
+        }
+
 }
