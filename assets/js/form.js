@@ -1,16 +1,4 @@
-window.addEventListener('load', function(){
 
-    if(localStorage.getItem('light') === undefined || localStorage.getItem('light') === null){
-        localStorage.setItem('light', false);
-
-        lightMode();
-    }
-    else if(this.localStorage.getItem('light') === 'true'){
-        lightMode();
-    }else{
-        darkMode();
-    }
-});
 
 const dark1 = 'white';
 const dark2 = 'rgba(154, 205, 237, 1)';
@@ -19,9 +7,20 @@ const dark4 = 'rgba(0, 85, 154, 1)';
 const dark5 = 'rgba(0, 5, 54, 1)';
 
 let statusjs = document.title;
-if(statusjs === 'Homepage')
-    console.log(statusjs);
 
+    window.addEventListener('load', function(){
+
+        if(localStorage.getItem('light') === undefined || localStorage.getItem('light') === null){
+            localStorage.setItem('light', false);
+    
+            lightMode();
+        }
+        else if(this.localStorage.getItem('light') === 'true'){
+            lightMode();
+        }else{
+            darkMode();
+        }
+    });
 
 
 const clickLight = document.getElementById('light-bulb');
