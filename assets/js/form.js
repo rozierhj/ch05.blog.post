@@ -12,7 +12,7 @@ let statusjs = document.title;
     window.addEventListener('load', function(){
 
         if(localStorage.getItem('light') === undefined || localStorage.getItem('light') === null){
-            localStorage.setItem('light', false);
+            localStorage.setItem('light', true);
     
             lightMode();
         }
