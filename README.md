@@ -6,9 +6,22 @@ The focus of this challenge was on dynamically creating html elements and stylin
 
 ## Usage
 
-Here is a [link to the webpage](https://rozierhj.github.io/Portfolio.hr/#more-details)
-
+Here is a [link to the webpage](https://rozierhj.github.io/ch05.blog.post/index.html)
 
 This is what the web page should like like when this challenge is complete.
 
-![Image of web page from challenge](/assets/images/PortfolioWebsite.png)
+Light Mode Homepage
+![Here is the Hompage in Light Mode](./index.html.png)
+
+Ligh Mode Blog Posts
+![Here are the Blog Posts in Light Mode](./blog.html.png) 
+
+
+Dark Mode Homepage
+![Here is the Homepage in Dark Mode](./index.html.darkMode.png) 
+
+Dark Mode Blog Posts
+![Here are the Blog Posts in Dark Mode](./blog.html.darkMode.png)  
+
+
+A video of [The Webpage in action](https://app.screencastify.com/v3/watch/BNGVJT8Dz7fipOhJPVpb)
