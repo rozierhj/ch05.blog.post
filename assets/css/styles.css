@@ -23,7 +23,7 @@ body{
 header{
     display: flex;
     position: relative;
-    height: 200px;
+    height: 150px;
     border-bottom: 7px solid;
     justify-content: left;
     align-items: start;
@@ -166,7 +166,7 @@ footer{
     width: 100%;
     align-items: center;
     justify-content: center;
-    height: 200px;
+    height: 180px;
     border-top: 7px solid;
 }
 #clear-button{
