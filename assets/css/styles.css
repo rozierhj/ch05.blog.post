@@ -92,8 +92,8 @@ input:active{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 800px;
-    width: 800px;
+    height: 700px;
+    width: 700px;
     margin: 50px;
     border-radius: 50%;
     border: 1px solid;
