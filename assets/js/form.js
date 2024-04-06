@@ -17,7 +17,7 @@ let statusjs = document.title;
         }
         else if(this.localStorage.getItem('light') === 'true'){
             lightMode();
-        }else{
+        }else{  
             darkMode();
         }
     });
@@ -69,6 +69,7 @@ function lightMode(){
         blogPosts(blogPostBackground,blogPostBorder,blogPostText);
 
       if(statusjs === 'Homepage'){
+
         setClassSide(pageBackground,pageText,formTitle,pageBorders);
         setForm(formBackground,formText,submitText,submitButton,submitBorder);
       }
@@ -131,7 +132,7 @@ function setClassSide(background, text, formTitle, borders){
     sideBorder.style.borderRightColor = borders;
 
     let topBorder = document.getElementsByTagName('main');
-    topBorder[0].style.borderTopColor = borders;
+    topBorder[0].style.borderColor = borders;
 
 
 
@@ -139,7 +140,7 @@ function setClassSide(background, text, formTitle, borders){
 function setForm(background, text, submitText, submitBackground, submitBorder){
 
     let inputField = document.getElementsByTagName('input');
-
+    console.log(inputField);
     for(let i = 0; i < inputField.length; i++){
         Object.assign(inputField[i].style,{
             backgroundColor: background,
@@ -171,7 +172,8 @@ function headerFooter(background, text, borders){
     let footer = document.getElementsByTagName('footer');
         Object.assign(footer[0].style,{
             backgroundColor: background,
-            color: text
+            color: text,
+            borderColor:borders
         });
     
 }
@@ -213,3 +215,5 @@ function blogPosts(background, borders, text){
         }
 
 }
+    
+

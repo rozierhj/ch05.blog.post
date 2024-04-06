@@ -4,14 +4,18 @@
     margin: 0;
     padding: 0;
     font-size: 32px;
-}
-html, body{
-    position: relative;
+} 
+
+html{
+    height: 100%;
+} 
+body{
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
-    height: 100%;
     font-size: 32px;
 }
 header{
@@ -26,7 +30,6 @@ footer{
     position: relative;
     display: flex;
     flex-direction: row;
-    bottom: 0;
     height: 200px;
     justify-content: left;
     align-items:center;
@@ -64,6 +67,7 @@ footer{
     height: 10px;
 }
 #bottom-divider{
+    bottom: 0;
     height: 10px;
 }
 main{
@@ -73,6 +77,7 @@ main{
     align-items: center;
     border-top: 7px solid;
     border-bottom: 7px solid;
+    flex: 1;
 }
 #back-button{
     font-size: 16px;
