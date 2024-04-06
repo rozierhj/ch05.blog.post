@@ -4,11 +4,15 @@ const dark3 = 'rgba(60, 169, 237, 1)';
 const dark4 = 'rgba(0, 85, 154, 1)';
 const dark5 = 'rgba(0, 5, 54, 1)';
 
+let statusjs = document.title;
+if(statusjs === 'Homepage')
+    console.log(statusjs);
+
 window.addEventListener('load', function(){
 
-    // let light = document.getElementById('light-bulb');
     if(localStorage.getItem('light') === undefined || localStorage.getItem('light') === null){
         localStorage.setItem('light', false);
+
         lightMode();
     }
     else if(this.localStorage.getItem('light') === 'true'){
@@ -16,8 +20,6 @@ window.addEventListener('load', function(){
     }else{
         darkMode();
     }
-    
-    // light.style.color = '#ccc';
 });
 
 const clickLight = document.getElementById('light-bulb');
@@ -55,9 +57,14 @@ function lightMode(){
 
     let lightBulb = document.getElementById('light-bulb');
         lightBulb.style.color = 'yellow';
+
         headerFooter(headerFooterBackground,h1Text,pageBorders);
+
+      if(statusjs === 'Homepage'){
         setClassSide(pageBackground,pageText,formTitle,pageBorders);
         setForm(formBackground,formText,submitText,submitButton,submitBorder);
+      }
+
 }
 function darkMode(){
 
@@ -77,8 +84,13 @@ function darkMode(){
     let lightBulb = document.getElementById('light-bulb');
     lightBulb.style.color = '#ccc';
         headerFooter(headerFooterBackground,h1Text,pageBorders);
-        setClassSide(pageBackground,pageText,formTitle,pageBorders);
-        setForm(formBackground,formText,submitText,submitButton,submitBorder);
+      
+        if(statusjs === 'Homepage'){
+            setClassSide(pageBackground,pageText,formTitle,pageBorders);
+            setForm(formBackground,formText,submitText,submitButton,submitBorder);
+        }
+
+        
 }
 function setClassSide(background, text, formTitle, borders){
     let classSide = document.getElementsByClassName('side');

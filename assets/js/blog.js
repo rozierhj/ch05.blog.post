@@ -25,9 +25,6 @@ for(let i = 0; i < localItems.length; i++){
     let username = document.createElement('h6');
     username.textContent = 'Posted by: '+ localItems[i].userName;
     container.append(username);
-    // console.log(localItems[i].content);
-    // console.log(localItems[i].title);
-    // console.log(localItems[i].content);
 }
 
 const backButton = document.getElementById('back-button');
@@ -36,35 +33,3 @@ backButton.addEventListener('click',function(){
     window.location.href='index.html';
 
 });
-
-const lightbulb = document.getElementById('light-bulb');
-lightbulb.addEventListener('click',function(){
-    if(localStorage.getItem('light') === 'false'){
-        localStorage.setItem('light','true');
-    }else{
-        localStorage.setItem('light','false');
-    }
-    let light = localStorage.getItem('light');
-    lightMode(light);
-});
-
-function lightMode(isLight){
-    let lightBulb = document.getElementById('light-bulb');
-
-    if(isLight === 'false'){
-        lightBulb.style.color = '#dae908';
-        alert('lightbulb clicked');
-        //light mode
-
-    }else{
-        alert('lightbulb clicked');
-        lightBulb.style.color = '#ccc';
-        //dark mode
-    }
-}
-
-function toggleDarkMode() {
-    const isDarkMode = document.body.classList.toggle('dark-mode');
-    // Store the user's preference in localStorage
-    localStorage.setItem('isDarkMode', isDarkMode);
-  }
