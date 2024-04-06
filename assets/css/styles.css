@@ -102,7 +102,7 @@ input:active{
     align-items: center;
     justify-content: center;
     height: 80%;
-    width: 80%;
+    /* width: auto; */
     margin: 0;
     border-radius: 50%;
     border: 1px solid;
@@ -177,4 +177,10 @@ footer{
     height: 50px;
     width: 200px;
     font-size: 16px;
+}
+@media  screen and (max-width:1400px) {
+    #circle h1{
+        font-size: 50px;
+    }
+    
 }

@@ -29,3 +29,8 @@ clearButton.addEventListener('click', function(){
     console.log('Cleared Local Storage');
     alert('local storage clear');
 });
+let circle = document.getElementById('circle');
+let height = circle.offsetHeight;
+console.log(circle);
+circle.style.width = height;
+
