@@ -1,3 +1,4 @@
+/* Code controls the styling of the homepage */
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -13,14 +14,30 @@ html, body{
     height: 100%;
     font-size: 32px;
 }
+/* Page Header elements */
 header{
     padding: 0;
     height: 200px;
     border-bottom: 7px solid;
 }
+/* acts as gap between header and main page body */
 #divider{
     height: 10px;
 }
+/* lightbulb icon acts as button to toggle between light and dark mode */
+#light-bulb{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    right:20px;
+    top: 20px;
+    font-size: 35px;
+}
+#light-bulb:hover, #light-bulb:active{
+    cursor: pointer;
+}
+/* Page Body Elements */
 main{
     display: flex;
     border-top: 7px solid;
@@ -35,6 +52,7 @@ main{
     width: 50%;
     padding: 10px;
 }
+/* a form the user fills out. the data of which is submitted into local storage */
 form{
     display: flex;
     flex-direction: column;
@@ -45,20 +63,6 @@ input,
 input:hover, 
 input:active{
     font-size: 32px;
-}
-#light-bulb{
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    right:20px;
-    top: 20px;
-    font-size: 35px;
-}
-#light-bulb:hover, #light-bulb:active{
-    cursor: pointer;
-}
-input {
     height: 100px;
     padding-left: 20px;
 }
@@ -83,6 +87,7 @@ input {
 #submit-button:hover, #submit-button:active{
     cursor: pointer;
 }
+/* Circle on the left side of the main menu that contains a color shading gradient for blue */
 #circle{
     display: flex;
     align-items: center;
@@ -142,6 +147,7 @@ input {
     padding: 10px;
     border-radius: 10px;
 }
+/* Page Footer Elements */
 #bottom-divider{
     height: 10px;
 }

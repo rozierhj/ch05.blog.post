@@ -11,11 +11,13 @@
 </head>
 <body id="body-page">
     <header id="body-header">
+        <!-- lightbulb icon will act as toggle switch between light-mode and dark-mode style -->
         <i class="fas fa-lightbulb" id="light-bulb"></i>
     </header>
     <div id='divider'></div>
     <main>
         <div class="side">
+            <!-- circle is decorative image -->
             <div id="circle">
                 <h1>My First Blog</h1>
             </div>
@@ -24,6 +26,7 @@
         </div>
         <div class="side" id="menu"></di>
             <h1>What's on your mind?</h1>
+            <!-- user fillsout these form values and they are stored in local storage when the users hits the submit button -->
             <form>
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" autocomplete="off" placeholder="Username..">
@@ -44,8 +47,9 @@
             <input type="button"  id="clear-button" value="Clear Local Storage">
         </button>
     </footer>
-
+<!-- first script controls the data input and event listeners of the homepage -->
     <script src="/assets/js/logic.js"></script>
+    <!-- second script controls the light-mode/dark-mode style of the homepage -->
     <script src="/assets/js/form.js"></script>
 </body>
 </html>

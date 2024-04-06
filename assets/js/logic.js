@@ -1,5 +1,7 @@
+
 const submitButton = document.getElementById('submit-button');
 
+// Listen for the fors submit button to be clicked. put data in local storage if it has been and take user to the blog page
 submitButton.addEventListener('click',function(event){
     event.preventDefault();
 
@@ -20,6 +22,7 @@ submitButton.addEventListener('click',function(event){
     }
 });
 
+//listen for the clear local storage button to be clicked and clear the local storage if it is clicked
 const clearButton = document.getElementById('clear-button');
 clearButton.addEventListener('click', function(){
     localStorage.clear();

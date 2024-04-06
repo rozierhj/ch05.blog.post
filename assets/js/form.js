@@ -1,5 +1,6 @@
+// code controls the light/dark mode styles of the homepage and blog page
 
-
+//default page color style
 const dark1 = 'white';
 const dark2 = 'rgba(154, 205, 237, 1)';
 const dark3 = 'rgba(60, 169, 237, 1)'; 
@@ -7,7 +8,7 @@ const dark4 = 'rgba(0, 85, 154, 1)';
 const dark5 = 'rgba(0, 5, 54, 1)';
 
 let statusjs = document.title;
-
+//update the page style on load
     window.addEventListener('load', function(){
 
         if(localStorage.getItem('light') === undefined || localStorage.getItem('light') === null){
@@ -22,7 +23,7 @@ let statusjs = document.title;
         }
     });
 
-
+//switch between light/dark mode when the lightbulb icon is pressed
 const clickLight = document.getElementById('light-bulb');
 clickLight.addEventListener('click',function(){
 
@@ -43,6 +44,7 @@ clickLight.addEventListener('click',function(){
 
 });
 
+//collection of style functions and the light-mode inputs
 function lightMode(){
     let headerFooterBackground = dark3;
     let pageBorders = dark5;
@@ -78,6 +80,7 @@ function lightMode(){
       }
 
 }
+//collection of style function and their dark-mode inputs
 function darkMode(){
 
 
@@ -112,6 +115,7 @@ function darkMode(){
           }
         
 }
+//styling the main page of the homepage
 function setClassSide(background, text, formTitle, borders){
     let classSide = document.getElementsByClassName('side');
 
@@ -137,6 +141,7 @@ function setClassSide(background, text, formTitle, borders){
 
 
 }
+//styling the input form on the homepage
 function setForm(background, text, submitText, submitBackground, submitBorder){
 
     let inputField = document.getElementsByTagName('input');
@@ -160,6 +165,7 @@ function setForm(background, text, submitText, submitBackground, submitBorder){
     submit.style.backgroundColor = submitBackground;
     submit.style.borderBottomColor = submitBorder;
 }
+//styling the header footers on the homepage and blog page
 function headerFooter(background, text, borders){
     
     let header = document.getElementsByTagName('header');
@@ -177,6 +183,7 @@ function headerFooter(background, text, borders){
         });
     
 }
+//styling the main page of the blog page
 function blogBackground(background, borders, text){
 
     let blogFooter = document.getElementsByTagName('footer');
@@ -203,6 +210,7 @@ function blogBackground(background, borders, text){
     let backArrow = backButton.getElementsByTagName('i');
     backArrow[0].style.color = borders;
 }
+//styling the individual blog div elements
 function blogPosts(background, borders, text){
 
     let posts = document.getElementsByClassName('blog-post');
