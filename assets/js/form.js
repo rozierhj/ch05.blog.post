@@ -156,3 +156,13 @@ function headerFooter(background, text, borders){
         });
     
 }
+function blogBackground(background, headerFooterBackground, borders){
+    let header = document.getElementsByTagName('header');
+        Object.assign(header[0],style,{
+            backgroundColor : headerFooterBackground
+        });
+    let footer = document.getElementsByTagName('footer');
+        Object.assign(footer[0],style,{
+            backgroundColor : headerFooterBackground
+        });
+}

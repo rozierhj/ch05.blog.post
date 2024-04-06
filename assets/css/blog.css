@@ -5,14 +5,8 @@
     padding: 0;
     font-size: 32px;
 }
-:root{
-    --dark-1: white ;
-    --dark-2: rgba(154, 205, 237, 1);
-    --dark-3: rgba(60, 169, 237, 1); 
-    --dark-4: rgba(0, 85, 154, 1);
-    --dark-5: rgba(0, 5, 54, 1);
-}
 html, body{
+    position: relative;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -23,22 +17,62 @@ html, body{
 header{
     display: flex;
     position: relative;
-    background-color: var(--dark-2);
-    height: 150px;
-    border-bottom: 7px solid var(--dark-5);
+    height: 200px;
+    border-bottom: 7px solid;
     justify-content: left;
     align-items:start;
+}
+footer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    height: 200px;
+    justify-content: left;
+    align-items:center;
+    border-top: 7px solid;
+}
+#heart{
+    position: absolute;
+    width: 20%;
+    left:40%;
+    height: 100%;
+    display: flex;
+    align-items:start;
+    justify-content: center;
+}
+#heart p{   
+    margin-top: 30px;
+}
+#footer-text{
+    margin-left: 10px;
+}
+#footer-text a{
+    font-size: 18px !important;
+}
+#footer-text a:visited, #footer-text a:link{
+    color: inherit;
+}
+#footer-text strong{
+    font-size: 18px !important;
+}
+#footer-text li{
+    padding: 5px;
+    font-size: 18px !important;
 }
 #divider{
     height: 10px;
 }
+#bottom-divider{
+    height: 10px;
+}
 main{
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-top: 7px solid var(--dark-5);
-    background-color: var(--dark-1);
+    border-top: 7px solid;
+    border-bottom: 7px solid;
 }
 #back-button{
     font-size: 16px;
@@ -46,9 +80,7 @@ main{
     right:60px;
     top: 20px;
     border: none;
-    background-color:#007bff;
-    color: white;
-    border-bottom: 4px solid #0056b3;
+    border-bottom: 4px solid;
     border-radius: 5px;
     width: 100px;
     height: 35px;
