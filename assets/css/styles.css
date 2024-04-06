@@ -4,7 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 32px;
+    /* font-size: 32px; */
 }
 html{
     height: 100%;
@@ -17,7 +17,7 @@ body{
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    font-size: 32px;
+    /* font-size: 32px; */
 }
 /* Page Header elements */
 header{
@@ -63,17 +63,20 @@ main{
 }
 /* a form the user fills out. the data of which is submitted into local storage */
 form{
+    padding: 0;
     display: flex;
     flex-direction: column;
-    padding: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
     width: 100%;
 }
 input,
 input:hover, 
 input:active{
     font-size: 32px;
-    height: 100px;
+    height: 60px;
     padding-left: 20px;
+    margin-bottom:10px
 }
 #menu{
     display:flex;

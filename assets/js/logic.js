@@ -34,3 +34,4 @@ let height = circle.offsetHeight;
 console.log(circle);
 circle.style.width = height;
 
+console.log(window.screen.height);
